@@ -12,8 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  skip: True  # [py2k]
+  number: 1
+  skip: True  # [py2k or osx]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -35,6 +35,7 @@ requirements:
     - toolz
     - tqdm
     - pyzmq
+    - doct
 
 test:
   imports:
