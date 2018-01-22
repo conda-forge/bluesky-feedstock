@@ -1,6 +1,6 @@
 {% set name = "bluesky" %}
-{% set version = "1.0.0" %}
-{% set sha256 = "e68dbcb64f98997a193408d1510c70d0ee00dedf79c35dad703f35d773f02e11" %}
+{% set version = "1.1.0" %}
+{% set sha256 = "bf5467874716eca7741d8a95326317fa2ae3778c4211cb7b52588a830c62169e" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0 
   skip: True  # [py2k or osx]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
