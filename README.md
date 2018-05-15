@@ -14,14 +14,16 @@ A Python data collection interface for experimental science
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/bluesky-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/bluesky-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/bluesky-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/bluesky-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/bluesky-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/bluesky-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/bluesky-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/bluesky-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/bluesky-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/bluesky-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/bluesky-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/bluesky-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/bluesky/badges/version.svg)](https://anaconda.org/conda-forge/bluesky)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/bluesky/badges/downloads.svg)](https://anaconda.org/conda-forge/bluesky)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-bluesky-green.svg)](https://anaconda.org/conda-forge/bluesky) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/bluesky.svg)](https://anaconda.org/conda-forge/bluesky) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/bluesky.svg)](https://anaconda.org/conda-forge/bluesky) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/bluesky.svg)](https://anaconda.org/conda-forge/bluesky) |
 
 Installing bluesky
 ==================
