@@ -1,6 +1,6 @@
 {% set name = "bluesky" %}
-{% set version = "1.5.2" %}
-{% set sha256 = "60cb073a72d760210a12c2d990b6e8bbeb76f26908f654c5a2a3ec1cc76300b1" %}
+{% set version = "1.5.3" %}
+{% set sha256 = "bd2c4ea4fa4c60d790dccccd17caa057aa1d856c448de992ee4a0ac6935b18f0" %}
 
 package:
   name: {{ name|lower }}
