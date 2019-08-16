@@ -1,41 +1,41 @@
 {% set name = "bluesky" %}
-{% set version = "1.5.4" %}
-{% set sha256 = "309d284bb3f95539e1d89a76b4e640f59a6b575308582690c9fbc259a9cd329c" %}
+{% set version = "1.5.5" %}
+{% set sha256 = "fac72ddc54d97343fbead3233ddb131a84ee6379f257a5981ae4af85e6092501" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/NSLS-II/{{ name }}/archive/v{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
+  noarch: python
   number: 0
-  skip: True  # [py2k]
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
-  build:
-    - python
-    - setuptools
+  host:
+    - python >=3.6
+    - pip
 
   run:
-    - python
+    - python >=3.6
     - cycler
-    - event-model
+    - databroker
+    - doct
+    - event-model >=1.10.0
     - historydict
     - ipython
-    - jsonschema
     - lmfit
     - matplotlib
     - numpy
+    - ophyd
+    - pyzmq
     - super_state_machine
     - toolz
     - tqdm
-    - pyzmq
-    - doct
 
 test:
   imports:
@@ -44,15 +44,15 @@ test:
     - bluesky.callbacks
 
 about:
-  home: https://github.com/NSLS-II/bluesky
+  home: https://blueskyproject.io
   license: BSD-3-clause
   license_family: BSD
   license_file: LICENSE
   summary: 'A Python data collection interface for experimental science'
 
   description: 'A Python data collection interface for experimental science'
-  doc_url: http://nsls-ii.github.io/bluesky/
-  dev_url: https://github.com/NSLS-II/bluesky
+  doc_url: https://blueskyproject.io/bluesky
+  dev_url: https://github.com/bluesky/bluesky
 
 extra:
   recipe-maintainers:
