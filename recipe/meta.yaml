@@ -8,34 +8,35 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/NSLS-II/{{ name }}/archive/v{{ version }}.tar.gz
+  url: https://github.com/{{ name }}/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
+  noarch: python
   number: 0
-  skip: True  # [py2k]
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
+    - pip
 
   run:
     - python
     - cycler
-    - event-model
+    - databroker
+    - doct
+    - event-model >=1.10.0
     - historydict
     - ipython
-    - jsonschema
     - lmfit
     - matplotlib
     - numpy
+    - ophyd
+    - pyzmq
     - super_state_machine
     - toolz
     - tqdm
-    - pyzmq
-    - doct
 
 test:
   imports:
@@ -44,15 +45,15 @@ test:
     - bluesky.callbacks
 
 about:
-  home: https://github.com/NSLS-II/bluesky
+  home: https://blueskyproject.io
   license: BSD-3-clause
   license_family: BSD
   license_file: LICENSE
   summary: 'A Python data collection interface for experimental science'
 
   description: 'A Python data collection interface for experimental science'
-  doc_url: http://nsls-ii.github.io/bluesky/
-  dev_url: https://github.com/NSLS-II/bluesky
+  doc_url: https://blueskyproject.io/bluesky
+  dev_url: https://github.com/bluesky/bluesky
 
 extra:
   recipe-maintainers:
