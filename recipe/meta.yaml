@@ -1,14 +1,13 @@
 {% set name = "bluesky" %}
 {% set version = "1.5.5" %}
-{% set sha256 = "587997ea130b28727eb4316682b68c08b6ec95ed49e9a44045548cceec7a2a19" %}
+{% set sha256 = "fac72ddc54d97343fbead3233ddb131a84ee6379f257a5981ae4af85e6092501" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/{{ name }}/{{ name }}/archive/v{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
