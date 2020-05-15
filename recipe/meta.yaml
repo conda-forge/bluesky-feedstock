@@ -30,6 +30,8 @@ requirements:
     - ipython
     - lmfit
     - matplotlib
+    - msgpack-python
+    - msgpack-numpy
     - numpy
     - ophyd
     - pyzmq
