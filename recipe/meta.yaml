@@ -38,7 +38,8 @@ requirements:
     - super_state_machine
     - toolz
     - tqdm
-
+    - zict
+    
 test:
   imports:
     - bluesky
