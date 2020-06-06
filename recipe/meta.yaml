@@ -1,6 +1,6 @@
 {% set name = "bluesky" %}
-{% set version = "1.6.1" %}
-{% set sha256 = "c6fb9e8b87893b1ea28f8c2b048cd07eef2d21f273bbabdc57b969c342806ebc" %}
+{% set version = "1.6.2" %}
+{% set sha256 = "af4a5bafe4004afebe0e4c44f1bab7353a5fc927f0eb81cf6fd2b3b7e2d2ad68" %}
 
 package:
   name: {{ name|lower }}
@@ -39,7 +39,7 @@ requirements:
     - toolz
     - tqdm
     - zict
-    
+
 test:
   imports:
     - bluesky
