@@ -3,7 +3,7 @@ About bluesky
 
 Home: https://blueskyproject.io
 
-Package license: BSD-3-clause
+Package license: BSD-3-Clause
 
 Feedstock license: BSD 3-Clause
 
