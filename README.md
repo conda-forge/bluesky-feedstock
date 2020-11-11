@@ -5,9 +5,13 @@ Home: https://blueskyproject.io
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bluesky-feedstock/blob/master/LICENSE.txt)
 
 Summary: A Python data collection interface for experimental science
+
+Development: https://github.com/bluesky/bluesky
+
+Documentation: https://blueskyproject.io/bluesky
 
 A Python data collection interface for experimental science
 
