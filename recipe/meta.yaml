@@ -1,6 +1,6 @@
 {% set name = "bluesky" %}
-{% set version = "1.8.0" %}
-{% set sha256 = "d189c4b5d0d7c986d30089012c11de2a5badc3ff9f7d1db005079d485a4c78f1" %}
+{% set version = "1.8.1" %}
+{% set sha256 = "069902b712949f3a4ef573836c7d01a6345541ea01c58cd349f62b4f9a8a45d3" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
