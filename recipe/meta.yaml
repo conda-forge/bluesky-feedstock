@@ -47,7 +47,7 @@ outputs:
       - ophyd
       - python >=3.6
       - pyzmq
-      - {{ pin_subpackage('matplotlib-base', max_pin="x.x.x") }}
+      - {{ pin_subpackage('bluesky-base', max_pin="x.x.x") }}
 
 test:
   imports:
