@@ -11,9 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  noarch: python
   number: 1
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 test:
   imports:
@@ -23,6 +21,9 @@ test:
 
 outputs:
 - name: bluesky-base
+  build:
+    noarch: python
+    script: {{ PYTHON }} -m pip install . --no-deps -vv
   requirements:
     host:
       - python >=3.6
@@ -40,6 +41,9 @@ outputs:
       - tqdm >=4.44
       - zict
 - name: bluesky
+  build:
+    noarch: python
+    script: {{ PYTHON }} -m pip install . --no-deps -vv
   requirements:
     host:
       - python >=3.6
