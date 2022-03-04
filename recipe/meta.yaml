@@ -43,7 +43,6 @@ outputs:
 - name: bluesky
   build:
     noarch: python
-    script: {{ PYTHON }} -m pip install . --no-deps -vv
   requirements:
     host:
       - python >=3.6
