@@ -23,7 +23,7 @@ outputs:
   - name: bluesky-base
     build:
       noarch: python
-      script: {{ PYTHON }} -m pip install . --no-deps -vv
+      script: python -m pip install . --no-deps -vv
     requirements:
       host:
         - python >=3.6
