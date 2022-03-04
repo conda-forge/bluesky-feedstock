@@ -15,6 +15,12 @@ build:
   number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
+test:
+  imports:
+    - bluesky
+    - bluesky.plans
+    - bluesky.callbacks
+
 outputs:
 - name: bluesky-base
   requirements:
@@ -48,12 +54,6 @@ outputs:
       - python >=3.6
       - pyzmq
       - {{ pin_subpackage('bluesky-base', max_pin="x.x.x") }}
-
-test:
-  imports:
-    - bluesky
-    - bluesky.plans
-    - bluesky.callbacks
 
 about:
   home: https://blueskyproject.io
