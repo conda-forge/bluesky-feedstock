@@ -34,6 +34,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-bluesky-green.svg)](https://anaconda.org/conda-forge/bluesky) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/bluesky.svg)](https://anaconda.org/conda-forge/bluesky) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/bluesky.svg)](https://anaconda.org/conda-forge/bluesky) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/bluesky.svg)](https://anaconda.org/conda-forge/bluesky) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-bluesky--base-green.svg)](https://anaconda.org/conda-forge/bluesky-base) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/bluesky-base.svg)](https://anaconda.org/conda-forge/bluesky-base) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/bluesky-base.svg)](https://anaconda.org/conda-forge/bluesky-base) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/bluesky-base.svg)](https://anaconda.org/conda-forge/bluesky-base) |
 
 Installing bluesky
 ==================
@@ -45,10 +46,10 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `bluesky` can be installed with:
+Once the `conda-forge` channel has been enabled, `bluesky, bluesky-base` can be installed with:
 
 ```
-conda install bluesky
+conda install bluesky bluesky-base
 ```
 
 It is possible to list all of the versions of `bluesky` available on your platform with:
