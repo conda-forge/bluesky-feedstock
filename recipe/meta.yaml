@@ -1,5 +1,4 @@
 {% set name = "bluesky" %}
-{% set version = "1.8.2" %}
 {% set sha256 = "858bc9b46ba26bd2ba70282d043d3f665f1245b3cc97eb2431fe2fa8c57df005" %}
 
 package:
@@ -12,33 +11,43 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
+
+outputs:
+- name: bluesky-base
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-
-requirements:
-  host:
-    - python >=3.6
-    - pip
-
-  run:
-    - python >=3.6
-    - cycler
-    - databroker
-    - doct
-    - event-model >=1.10.0
-    - historydict
-    - ipython
-    - lmfit
-    - matplotlib
-    - msgpack-python
-    - msgpack-numpy
-    - numpy
-    - ophyd
-    - pyzmq
-    - super_state_machine
-    - toolz
-    - tqdm
-    - zict
+  requirements:
+    host:
+      - python >=3.6
+      - pip
+    run:
+      - python >=3.6
+      - cycler
+      - event-model >=1.10.0
+      - historydict
+      - msgpack-numpy
+      - msgpack-python
+      - numpy
+      - super_state_machine
+      - toolz
+      - tqdm >=4.44
+      - zict
+- name: bluesky
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  requirements:
+    host:
+      - python >=3.6
+      - pip
+    run:
+      - databroker
+      - doct
+      - ipython
+      - lmfit
+      - matplotlib
+      - ophyd
+      - python >=3.6
+      - pyzmq
+      - {{ pin_subpackage('matplotlib-base', max_pin="x.x.x") }}
 
 test:
   imports:
