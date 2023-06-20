@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
 
 test:
   imports:
@@ -26,12 +26,12 @@ outputs:
       script: python -m pip install . --no-deps -vv
     requirements:
       host:
-        - python >=3.6
+        - python >=3.8
         - pip
       run:
-        - python >=3.6
+        - python >=3.8
         - cycler
-        - event-model >=1.10.0
+        - event-model >=1.14.0
         - historydict
         - msgpack-numpy
         - msgpack-python
@@ -39,23 +39,23 @@ outputs:
         - super_state_machine
         - toolz
         - tqdm >=4.44
-        - zict
+        - zict <3.0.0
 
   - name: bluesky
     build:
       noarch: python
     requirements:
       host:
-        - python >=3.6
+        - python >=3.8
         - pip
       run:
+        - python >=3.8
         - databroker
         - doct
         - ipython
         - lmfit
         - matplotlib
         - ophyd
-        - python >=3.6
         - pyzmq
         - {{ pin_subpackage('bluesky-base', max_pin="x.x.x") }}
 
