@@ -18,6 +18,10 @@ test:
     - bluesky
     - bluesky.plans
     - bluesky.callbacks
+  commands:
+    - pip check
+  requires:
+    - pip
 
 outputs:
   - name: bluesky-base
