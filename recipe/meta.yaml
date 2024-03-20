@@ -1,6 +1,5 @@
 {% set name = "bluesky" %}
-{% set version = "1.12.0" %}
-{% set sha256 = "63579d05c8d3bdec6a644c900de5e0d55c95b7bbbede03c0003f2a7ed61f9274" %}
+{% set version = "1.13.0a2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 50ea127d550b5d72ac356897534f4584ea184c4fac013f45fd8c749b7c52d6ca
 
 build:
   number: 0
@@ -69,7 +68,6 @@ about:
   license_family: BSD
   license_file: LICENSE
   summary: A Python data collection interface for experimental science
-
   description: A Python data collection interface for experimental science
   doc_url: https://blueskyproject.io/bluesky
   dev_url: https://github.com/bluesky/bluesky
