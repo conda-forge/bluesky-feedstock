@@ -150,5 +150,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@conda-forge/event-model](https://github.com/conda-forge/event-model/)
+* [@conda-forge/event-model](https://github.com/orgs/conda-forge/teams/event-model/)
 
