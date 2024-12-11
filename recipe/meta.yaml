@@ -44,6 +44,7 @@ outputs:
         - toolz
         - tqdm >=4.44
         - zict <3.0.0
+        - opentelemetry-api
 
   - name: bluesky
     build:
