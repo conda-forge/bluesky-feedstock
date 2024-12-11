@@ -28,6 +28,8 @@ outputs:
       noarch: python
       script: python -m pip install . --no-deps -vv
     requirements:
+      build:
+        - setuptools
       host:
         - python >=3.8
         - pip
