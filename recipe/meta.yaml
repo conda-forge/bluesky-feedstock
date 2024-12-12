@@ -39,7 +39,7 @@ outputs:
         - historydict
         - msgpack-numpy
         - msgpack-python
-        - numpy
+        - numpy <2
         - super_state_machine
         - toolz
         - tqdm >=4.44
