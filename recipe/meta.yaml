@@ -6,11 +6,11 @@ package:
   version: {{ version }}.0
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: bd2814917276bbfbd24477c8575c6b30068d94149c48f123b1c84a193e0a0fca
 
 build:
-  number: 0
+  number: 1
 
 test:
   imports:
@@ -29,11 +29,11 @@ outputs:
       script: python -m pip install . --no-deps -vv
     requirements:
       host:
-        - python >=3.8
+        - python {{ python_min }}
         - pip
         - setuptools
       run:
-        - python >=3.8
+        - python >={{ python_min }}
         - cycler
         - event-model >=1.14.0
         - historydict
@@ -51,11 +51,11 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python
+        - python {{ python_min }}
         - pip
         - setuptools
       run:
-        - python
+        - python >={{ python_min }}
         - databroker
         - doct
         - ipython
