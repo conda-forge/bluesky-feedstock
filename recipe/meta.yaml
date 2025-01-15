@@ -20,6 +20,7 @@ test:
   commands:
     - pip check
   requires:
+    - databroker >=2.0.0b52
     - pip
 
 outputs:
