@@ -1,16 +1,16 @@
 {% set name = "bluesky" %}
-{% set version = "1.13" %}
+{% set version = "1.13.1rc2" %}
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}.0
+  version: {{ version }}
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bd2814917276bbfbd24477c8575c6b30068d94149c48f123b1c84a193e0a0fca
+  sha256: 5cd20ab6c12fd88dcb78d64b0d1381c37969a7c3fc215c7946f386af9d21d045
 
 build:
-  number: 2
+  number: 0
 
 test:
   imports:
@@ -20,6 +20,7 @@ test:
   commands:
     - pip check
   requires:
+    - databroker >=2.0.0b52
     - pip
 
 outputs:
@@ -39,11 +40,11 @@ outputs:
         - historydict
         - msgpack-numpy
         - msgpack-python
-        - numpy <2
+        - numpy
+        - opentelemetry-api
         - toolz
         - tqdm >=4.44
-        - zict <3.0.0
-        - opentelemetry-api
+        - zict
 
   - name: bluesky
     build:
