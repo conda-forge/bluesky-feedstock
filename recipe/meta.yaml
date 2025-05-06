@@ -42,34 +42,6 @@ outputs:
         - tqdm >=4.44
         - zict
 
-  - name: bluesky
-    build:
-      noarch: python
-    requirements:
-      host:
-        - {{ pin_subpackage('bluesky-base', max_pin="x.x.x") }}
-      run:
-        - databroker
-        - doct
-        - ipython
-        - lmfit
-        - matplotlib
-        - ophyd
-        - pyzmq
-        - {{ pin_subpackage('bluesky-base', max_pin="x.x.x") }}
-    test:
-      imports:
-        - bluesky
-        - bluesky.plans
-        - bluesky.callbacks
-      commands:
-        - pip check
-      requires:
-        - databroker >=2.0.0b52
-        - pip
-
-
-
 about:
   home: https://blueskyproject.io
   license: BSD-3-Clause
