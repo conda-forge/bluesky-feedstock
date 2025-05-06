@@ -12,6 +12,12 @@ source:
 build:
   number: 0
 
+# to avoid creating redundant CI jobs, conda-smithy needs python
+# to be used in all outputs, including the implicit global one.
+requirements:
+  host:
+    - python
+
 
 outputs:
   - name: bluesky-base
