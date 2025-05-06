@@ -46,6 +46,8 @@ outputs:
     build:
       noarch: python
     requirements:
+      host:
+        - {{ pin_subpackage('bluesky-base', max_pin="x.x.x") }}
       run:
         - databroker
         - doct
