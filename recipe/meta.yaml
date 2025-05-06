@@ -12,16 +12,6 @@ source:
 build:
   number: 0
 
-test:
-  imports:
-    - bluesky
-    - bluesky.plans
-    - bluesky.callbacks
-  commands:
-    - pip check
-  requires:
-    - databroker >=2.0.0b52
-    - pip
 
 outputs:
   - name: bluesky-base
@@ -64,6 +54,16 @@ outputs:
         - ophyd
         - pyzmq
         - {{ pin_subpackage('bluesky-base', max_pin="x.x.x") }}
+    test:
+      imports:
+        - bluesky
+        - bluesky.plans
+        - bluesky.callbacks
+      commands:
+        - pip check
+      requires:
+        - databroker >=2.0.0b52
+        - pip
 
 
 
