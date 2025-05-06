@@ -24,25 +24,6 @@ test:
     - pip
 
 outputs:
-  - name: bluesky
-    build:
-      noarch: python
-    requirements:
-      host:
-        - python {{ python_min }}
-        - pip
-        - setuptools
-      run:
-        - python >={{ python_min }}
-        - databroker
-        - doct
-        - ipython
-        - lmfit
-        - matplotlib
-        - ophyd
-        - pyzmq
-        - {{ pin_subpackage('bluesky-base', max_pin="x.x.x") }}
-        
   - name: bluesky-base
     build:
       noarch: python
@@ -64,6 +45,25 @@ outputs:
         - toolz
         - tqdm >=4.44
         - zict
+
+  - name: bluesky
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python {{ python_min }}
+        - pip
+        - setuptools
+      run:
+        - python >={{ python_min }}
+        - databroker
+        - doct
+        - ipython
+        - lmfit
+        - matplotlib
+        - ophyd
+        - pyzmq
+        - {{ pin_subpackage('bluesky-base', max_pin="x.x.x") }}
 
 
 
