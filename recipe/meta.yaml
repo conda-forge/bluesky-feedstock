@@ -47,7 +47,6 @@ outputs:
       noarch: python
     requirements:
       run:
-        - python >={{ python_min }}
         - databroker
         - doct
         - ipython
