@@ -1,27 +1,23 @@
 {% set name = "bluesky" %}
-{% set version = "1.13.1rc2" %}
+{% set version = "1.13.1" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name|lower }}-suite
   version: {{ version }}
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5cd20ab6c12fd88dcb78d64b0d1381c37969a7c3fc215c7946f386af9d21d045
+  sha256: 1d2222211b6afa8ad836af5c079151e39ea5ca5076e06ac87b00abd61be67a71
 
 build:
   number: 0
 
-test:
-  imports:
-    - bluesky
-    - bluesky.plans
-    - bluesky.callbacks
-  commands:
-    - pip check
-  requires:
-    - databroker >=2.0.0b52
-    - pip
+# to avoid creating redundant CI jobs, conda-smithy needs python
+# to be used in all outputs, including the implicit global one.
+requirements:
+  host:
+    - python
+
 
 outputs:
   - name: bluesky-base
@@ -45,17 +41,17 @@ outputs:
         - toolz
         - tqdm >=4.44
         - zict
+    test:
+      imports:
+        - bluesky
 
   - name: bluesky
     build:
       noarch: python
     requirements:
       host:
-        - python {{ python_min }}
-        - pip
-        - setuptools
+        - {{ pin_subpackage('bluesky-base', max_pin="x.x.x") }}
       run:
-        - python >={{ python_min }}
         - databroker
         - doct
         - ipython
@@ -64,6 +60,16 @@ outputs:
         - ophyd
         - pyzmq
         - {{ pin_subpackage('bluesky-base', max_pin="x.x.x") }}
+    test:
+      imports:
+        - bluesky
+        - bluesky.plans
+        - bluesky.callbacks
+      commands:
+        - pip check
+      requires:
+        - pip
+
 
 about:
   home: https://blueskyproject.io
