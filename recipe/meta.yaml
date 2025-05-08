@@ -10,7 +10,7 @@ source:
   sha256: a11bc82de762342a7f3d073739e4d115955540a35a67346901789c54fd8ee09f
 
 build:
-  number: 0
+  number: 1
 
 # to avoid creating redundant CI jobs, conda-smithy needs python
 # to be used in all outputs, including the implicit global one.
