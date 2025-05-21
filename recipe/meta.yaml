@@ -1,5 +1,5 @@
 {% set name = "bluesky" %}
-{% set version = "1.14.0" %}
+{% set version = "1.14.1" %}
 
 package:
   name: {{ name|lower }}-suite
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a11bc82de762342a7f3d073739e4d115955540a35a67346901789c54fd8ee09f
+  sha256: 72dc8d69982fa3bf49eca496a9b5b121cfc080df9ef505a475e488159e29021d
 
 build:
-  number: 1
+  number: 0
 
 # to avoid creating redundant CI jobs, conda-smithy needs python
 # to be used in all outputs, including the implicit global one.
