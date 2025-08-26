@@ -1,5 +1,5 @@
 {% set name = "bluesky" %}
-{% set version = "1.14.2" %}
+{% set version = "1.14.4" %}
 
 package:
   name: {{ name|lower }}-suite
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a7aa2dfa9f718a7bbb9581238f6fc1f4a5962fc7059823a32b78ea986fedf16c
+  sha256: ce2782a92633ce2e2f1e8ed0a71df1f179bbff673d357785995a30290339e7e6
 
 build:
   number: 0
