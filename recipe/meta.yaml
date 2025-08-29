@@ -45,6 +45,8 @@ outputs:
     test:
       imports:
         - bluesky
+      requires:
+        - python {{ python_min }}
 
   - name: bluesky
     build:
@@ -70,7 +72,7 @@ outputs:
         - pip check
       requires:
         - pip
-
+        - python {{ python_min }}
 
 about:
   home: https://blueskyproject.io
