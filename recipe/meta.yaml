@@ -10,7 +10,7 @@ source:
   sha256: ce2782a92633ce2e2f1e8ed0a71df1f179bbff673d357785995a30290339e7e6
 
 build:
-  number: 0
+  number: 1
 
 # to avoid creating redundant CI jobs, conda-smithy needs python
 # to be used in all outputs, including the implicit global one.
@@ -23,12 +23,13 @@ outputs:
   - name: bluesky-base
     build:
       noarch: python
-      script: python -m pip install . --no-deps -vv
+      script: python -m pip install . --no-deps -vv --no-build-isolation
     requirements:
       host:
         - python {{ python_min }}
         - pip
         - setuptools
+        - setuptools_scm >=8
       run:
         - python >={{ python_min }}
         - cycler
