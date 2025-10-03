@@ -1,5 +1,5 @@
 {% set name = "bluesky" %}
-{% set version = "1.14.4" %}
+{% set version = "1.14.5" %}
 
 package:
   name: {{ name|lower }}-suite
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ce2782a92633ce2e2f1e8ed0a71df1f179bbff673d357785995a30290339e7e6
+  sha256: 324eff12d29cf315759ee781aa577b5341e144c77000b013e3a343a7381b620a
 
 build:
-  number: 1
+  number: 0
   noarch: python
 
 # to avoid creating redundant CI jobs, conda-smithy needs python
